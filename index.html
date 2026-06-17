@@ -253,9 +253,9 @@ function parseESPN(data) {
         w:   Math.round(stats['W']   ?? stats['w']  ?? 0),
         d:   Math.round(stats['D']   ?? stats['d']  ?? 0),
         l:   Math.round(stats['L']   ?? stats['l']  ?? 0),
-        gf:  Math.round(stats['GF']  ?? stats['F']  ?? stats['gf'] ?? 0),
-        ga:  Math.round(stats['GA']  ?? stats['A']  ?? stats['ga'] ?? 0),
-        pts: Math.round(stats['PTS'] ?? stats['Pts']?? stats['pts']?? 0),
+        gf:  Math.round(stats["F"] ?? 0),
+        ga:  Math.round(stats["A"] ?? 0),
+        pts: Math.round(stats["P"] ?? 0),
       };
     });
     if (teams.length > 0) groups.push({ name: letter, teams });
